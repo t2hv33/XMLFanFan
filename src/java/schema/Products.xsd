@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://xml.netbeans.org/schema/Products"
+            xmlns="http://xml.netbeans.org/schema/Products"
+            elementFormDefault="qualified">
+    <xsd:element name="Allproduct">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="productList" type="ProductType" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="ProductType">
+        <xsd:sequence>
+            <xsd:element name="PID" type="xsd:int"/>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Price" type="xsd:int"/>
+            <xsd:element name="Description" type="xsd:string"/>
+            <xsd:element name="Category" type="xsd:string"/>
+            <xsd:element name="Image" type="xsd:string"/>
+            <xsd:element name="Instock" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
