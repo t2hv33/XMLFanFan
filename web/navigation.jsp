@@ -9,21 +9,27 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Fan Fan</a>
+                    <a class="navbar-brand" href="index.jsp"><span class="glyphicon glyphicon-home"></span>Fan Fan</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#">About</a>
+                            <a href="#">Khuyến Mãi</a>
+                        </li>
+                         <li>
+                            <a href="#"><span class="glyphicons glyphicons-earphone" aria-hidden="true"></span> Bản Đồ</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#">Hỗ Trợ?</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Giỏ Hàng</a>
                         </li>
-                    </ul>
+                          <li>
+                              <a href="login.jsp"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Đăng Nhập</a>
+                        </li>
+                    </ul>  
                 </div>
                 <!-- /.navbar-collapse -->
             </div>

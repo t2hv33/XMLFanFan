@@ -24,289 +24,271 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Custom CSS -->
         <link href="css/shop-homepage.css" rel="stylesheet">
-		<link href="css/product-detail.css" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
+
+
+
+        <style type="text/css">
+            /*********************************************
+                            Call Bootstrap
+    *********************************************/
+
+            /*********************************************
+                                    Theme Elements
+            *********************************************/
+
+            .gold{
+                color: #FFBF00;
+            }
+
+            /*********************************************
+                                                    PRODUCTS
+            *********************************************/
+
+            .product{
+                border: 1px solid #dddddd;
+                height: 321px;
+            }
+
+            .product>img{
+                max-width: 230px;
+            }
+
+            .product-rating{
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+
+            .product-title{
+                font-size: 20px;
+            }
+
+            .product-desc{
+                font-size: 14px;
+            }
+
+            .product-price{
+                font-size: 22px;
+            }
+
+            .product-stock{
+                color: #74DF00;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .product-info{
+                margin-top: 50px;
+            }
+
+            /*********************************************
+                                                    VIEW
+            *********************************************/
+
+            .content-wrapper {
+                max-width: 1140px;
+                background: #fff;
+                margin: 0 auto;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                border: 0px;
+                border-radius: 0px;
+            }
+
+            .container-fluid{
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+
+            .view-wrapper {
+                float: right;
+                max-width: 70%;
+                margin-top: 25px;
+            }
+
+            .container {
+                padding-left: 0px;
+                padding-right: 0px;
+                max-width: 100%;
+            }
+
+            /*********************************************
+                                            ITEM 
+            *********************************************/
+
+            .service1-items {
+                padding: 0px 0 0px 0;
+                float: left;
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                height: 321px;
+                width: 130px;
+            }
+
+            .service1-item {
+                height: 107px;
+                width: 120px;
+                display: block;
+                float: left;
+                position: relative;
+                padding-right: 20px;
+                border-right: 1px solid #DDD;
+                border-top: 1px solid #DDD;
+                border-bottom: 1px solid #DDD;
+            }
+
+            .service1-item > img {
+                max-height: 110px;
+                max-width: 110px;
+                opacity: 0.6;
+                transition: all .2s ease-in;
+                -o-transition: all .2s ease-in;
+                -moz-transition: all .2s ease-in;
+                -webkit-transition: all .2s ease-in;
+            }
+
+            .service1-item > img:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+
+            .service-image-left {
+                padding-right: 50px;
+                width: 60%;
+            }
+
+            .service-image-right {
+                padding-left: 50px;
+            }
+
+            .service-image-left > center > img,.service-image-right > center > img{
+                max-height: 155px;
+
+
+            }
+
+        </style>
     </head>
 
     <body>
-
         <!-- Navigation -->
         <%@ include file="navigation.jsp" %>    
-
         <!-- Page Content -->
         <div class="container">
-
             <div class="row">
-                <%@ include file="menu.jsp" %>    
-
-
-
-                <div class="col-md-9">
-
-                    <div class="row carousel-holder">
-
-                        <div class="col-md-12">
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img class="slide-image" src="images/banner1.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img class="slide-image" src="images/banner2.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img class="slide-image" src="images/banner3.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img class="slide-image" src="images/banner4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
+                <%@ include file="menu.jsp" %>   
+                <div class="col-md-9"> 
                     <!--Chỗ ADD Product transfom jstl+doc-->
-                    <div class="row">
+                    <div class="container-fluid">
+                        <div class="content-wrapper">	
+                            <div class="item-container">	
+                                <div class="container">	
+                                    <div class="col-md-12">
+                                        <div class="product col-md-3 service-image-left">
+                                            <center>
+                                                <img id="item-display" src="images\product-detail1.png" alt=""></img>
+                                            </center>
+                                        </div>
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="images/banner1.jpg" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$24.99</h4>
-                                    <h4><a href="#">First Product</a>
-                                    </h4>
-                                    <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">15 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                                        <div class="container service1-items col-sm-2 col-md-2 pull-left">
+                                            <center>
+                                                <a id="item-1" class="service1-item">
+                                                    <img src="images\product-detail1.png" alt=""></img>
+                                                </a>
+                                                <a id="item-2" class="service1-item">
+                                                    <img src="images\product-detail1.png" alt=""></img>
+                                                </a>
+                                                <a id="item-3" class="service1-item">
+                                                    <img src="images\product-detail1.png" alt=""></img>
+                                                </a>
+                                            </center>
+                                        </div>
+                                    </div>
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="images/IMG_7022.JPG" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$64.99</h4>
-                                    <h4><a href="#">Second Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">12 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
+                                    <div class="col-md-7">
+                                        <div class="product-title">Corsair GS600 600 Watt PSU</div>
+                                        <div class="product-desc">The Corsair Gaming Series GS600 is the ideal price/performance choice for mid-spec gaming PC</div>
+                                        <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+                                        <hr>
+                                        <div class="product-price">22.990.000 VNĐ</div>
+                                        <div class="product-stock">Còn hàng</div>
+                                        <hr>
+                                        <div class="btn-group cart">
+                                            <button type="button" class="btn btn-success">
+                                                Thêm vào giỏ hàng 
+                                            </button>
+                                        </div>
+                                        <!--                                        <div class="btn-group wishlist">
+                                                                                    <button type="button" class="btn btn-danger">
+                                                                                        Add to wishlist 
+                                                                                    </button>
+                                                                                </div>-->
+                                    </div>
+                                </div> 
                             </div>
-                        </div>
+                            <div class="container-fluid">		
+                                <div class="col-md-12 product-info">
+                                    <ul id="myTab" class="nav nav-tabs nav_tabs">
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$74.99</h4>
-                                    <h4><a href="#">Third Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">31 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                                        <li class="active"><a href="#service-one" data-toggle="tab">Mô Tả</a></li>
+                                        <li><a href="#service-two" data-toggle="tab">Thông Số Sản Phẩm</a></li>
+                                        <li><a href="#service-three" data-toggle="tab">Đánh Giá</a></li>
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$84.99</h4>
-                                    <h4><a href="#">Fourth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">6 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade in active" id="service-one">
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Fifth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">18 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Fifth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">18 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Fifth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">18 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Fifth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">18 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/320x150" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Fifth Product</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">18 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                                            <section class="container product-info">
+                                                The Corsair Gaming Series GS600 power supply is the ideal price-performance solution for building or upgrading a Gaming PC. A single +12V rail provides up to 48A of reliable, continuous power for multi-core gaming PCs with multiple graphics cards. The ultra-quiet, dual ball-bearing fan automatically adjusts its speed according to temperature, so it will never intrude on your music and games. Blue LEDs bathe the transparent fan blades in a cool glow. Not feeling blue? You can turn off the lighting with the press of a button.
 
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <h4><a href="#">Like this template?</a>
-                            </h4>
-                            <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                            <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                        </div>
+                                                <h3>Corsair Gaming Series GS600 Features:</h3>
+                                                <li>It supports the latest ATX12V v2.3 standard and is backward compatible with ATX12V 2.2 and ATX12V 2.01 systems</li>
+                                                <li>An ultra-quiet 140mm double ball-bearing fan delivers great airflow at an very low noise level by varying fan speed in response to temperature</li>
+                                                <li>80Plus certified to deliver 80% efficiency or higher at normal load conditions (20% to 100% load)</li>
+                                                <li>0.99 Active Power Factor Correction provides clean and reliable power</li>
+                                                <li>Universal AC input from 90~264V — no more hassle of flipping that tiny red switch to select the voltage input!</li>
+                                                <li>Extra long fully-sleeved cables support full tower chassis</li>
+                                                <li>A three year warranty and lifetime access to Corsair’s legendary technical support and customer service</li>
+                                                <li>Over Current/Voltage/Power Protection, Under Voltage Protection and Short Circuit Protection provide complete component safety</li>
+                                                <li>Dimensions: 150mm(W) x 86mm(H) x 160mm(L)</li>
+                                                <li>MTBF: 100,000 hours</li>
+                                                <li>Safety Approvals: UL, CUL, CE, CB, FCC Class B, TÜV, CCC, C-tick</li>
+                                            </section>
 
+                                        </div>
+                                        <div class="tab-pane fade" id="service-two">
+
+                                            <section class="container">
+
+                                            </section>
+
+                                        </div>
+                                        <div class="tab-pane fade" id="service-three">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
 
-            </div>
 
+
+                </div> <!--End col-md9-->
+            </div><!--end row-->
         </div>
         <!-- /.container Footer -->
         <%@ include file="footer.jsp" %>    
         <!-- /.container -->
-
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
-
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-
     </body>
-
 </html>

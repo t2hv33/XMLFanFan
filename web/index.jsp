@@ -8,34 +8,8 @@
 <%@page import="controller.xmlprojectContextListener"%>
 <!DOCTYPE html>
 <html lang="en">
+    <%@ include file="header.jsp" %>    
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>LEO N&#218;I – TREKKING – D&#195; NGOẠI | SHOP ĐỒ DU LỊCH TP.HCM, ĐỒ ĐI PHƯỢT, LEO N&#218;I, D&#195; NGOẠI - THE TRAVEL SHOP</title>
-        <link rel="SHORTCUT ICON" href="images/fav.ico">
-        <meta name="author" content="ThanhHV">
-
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="css/shop-homepage.css" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
 
     <body>
 
@@ -93,7 +67,7 @@
                                 <img src="images/banner1.jpg" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$24.99</h4>
-                                    <h4><a href="#">First Product</a>
+                                    <h4><a href="product-detail.jsp">First Product</a>
                                     </h4>
                                     <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                                 </div>
@@ -115,7 +89,7 @@
                                 <img src="images/IMG_7022.JPG" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$64.99</h4>
-                                    <h4><a href="#">Second Product</a>
+                                    <h4><a href="product-detail.jsp">Second Product</a>
                                     </h4>
                                     <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
@@ -137,7 +111,7 @@
                                 <img src="http://placehold.it/320x150" alt="">
                                 <div class="caption">
                                     <h4 class="pull-right">$74.99</h4>
-                                    <h4><a href="#">Third Product</a>
+                                    <h4><a href="product-detail.jsp">Third Product</a>
                                     </h4>
                                     <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
