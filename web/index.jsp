@@ -7,6 +7,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.xmlprojectContextListener"%>
 <!DOCTYPE html>
+<%
+            String path = application.getRealPath("/");
+            String fileName = path + "xml/thanh.xml";
+            xmlprojectContextListener.prepareProductXML(fileName);
+%>
 <html lang="en">
     <%@ include file="header.jsp" %>    
 
