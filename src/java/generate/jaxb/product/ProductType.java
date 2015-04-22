@@ -1,4 +1,3 @@
-
 package generate.jaxb.product;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,12 +5,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ProductType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
+ * Java class for ProductType complex type.
+ *
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
+ *
  * <pre>
  * &lt;complexType name="ProductType">
  *   &lt;complexContent>
@@ -24,13 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Category" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Image" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Instock" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="Promotion" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProductType", propOrder = {
@@ -40,9 +42,25 @@ import javax.xml.bind.annotation.XmlType;
     "description",
     "category",
     "image",
-    "instock"
+    "instock",
+    "promotion"
 })
 public class ProductType {
+
+    public ProductType() {
+
+    }
+
+    public ProductType(int pid, String name, int price, String description, String category, String image, int instock, int promotion) {
+        this.pid = pid;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.category = category;
+        this.image = image;
+        this.instock = instock;
+        this.promotion = promotion;
+    }
 
     @XmlElement(name = "PID")
     protected int pid;
@@ -58,10 +76,12 @@ public class ProductType {
     protected String image;
     @XmlElement(name = "Instock")
     protected int instock;
+    @XmlElement(name = "Promotion")
+    protected int promotion;
 
     /**
      * Gets the value of the pid property.
-     * 
+     *
      */
     public int getPID() {
         return pid;
@@ -69,7 +89,7 @@ public class ProductType {
 
     /**
      * Sets the value of the pid property.
-     * 
+     *
      */
     public void setPID(int value) {
         this.pid = value;
@@ -77,11 +97,9 @@ public class ProductType {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is {@link String }
+     *
      */
     public String getName() {
         return name;
@@ -89,11 +107,9 @@ public class ProductType {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is {@link String }
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -101,7 +117,7 @@ public class ProductType {
 
     /**
      * Gets the value of the price property.
-     * 
+     *
      */
     public int getPrice() {
         return price;
@@ -109,7 +125,7 @@ public class ProductType {
 
     /**
      * Sets the value of the price property.
-     * 
+     *
      */
     public void setPrice(int value) {
         this.price = value;
@@ -117,11 +133,9 @@ public class ProductType {
 
     /**
      * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is {@link String }
+     *
      */
     public String getDescription() {
         return description;
@@ -129,11 +143,9 @@ public class ProductType {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is {@link String }
+     *
      */
     public void setDescription(String value) {
         this.description = value;
@@ -141,11 +153,9 @@ public class ProductType {
 
     /**
      * Gets the value of the category property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is {@link String }
+     *
      */
     public String getCategory() {
         return category;
@@ -153,11 +163,9 @@ public class ProductType {
 
     /**
      * Sets the value of the category property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is {@link String }
+     *
      */
     public void setCategory(String value) {
         this.category = value;
@@ -165,11 +173,9 @@ public class ProductType {
 
     /**
      * Gets the value of the image property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is {@link String }
+     *
      */
     public String getImage() {
         return image;
@@ -177,11 +183,9 @@ public class ProductType {
 
     /**
      * Sets the value of the image property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is {@link String }
+     *
      */
     public void setImage(String value) {
         this.image = value;
@@ -189,7 +193,7 @@ public class ProductType {
 
     /**
      * Gets the value of the instock property.
-     * 
+     *
      */
     public int getInstock() {
         return instock;
@@ -197,10 +201,26 @@ public class ProductType {
 
     /**
      * Sets the value of the instock property.
-     * 
+     *
      */
     public void setInstock(int value) {
         this.instock = value;
+    }
+
+    /**
+     * Gets the value of the promotion property.
+     *
+     */
+    public int getPromotion() {
+        return promotion;
+    }
+
+    /**
+     * Sets the value of the promotion property.
+     *
+     */
+    public void setPromotion(int value) {
+        this.promotion = value;
     }
 
 }

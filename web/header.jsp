@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LEO N&#218;I – TREKKING – D&#195; NGOẠI | SHOP ĐỒ DU LỊCH TP.HCM, ĐỒ ĐI PHƯỢT, LEO N&#218;I, D&#195; NGOẠI - THE TRAVEL SHOP</title>
+    <title>XML LEO N&#218;I – TREKKING – D&#195; NGOẠI | SHOP ĐỒ DU LỊCH TP.HCM, ĐỒ ĐI PHƯỢT, LEO N&#218;I, D&#195; NGOẠI - THE TRAVEL SHOP</title>
     <link rel="SHORTCUT ICON" href="images/fav.ico">
     <meta name="author" content="ThanhHV">
 

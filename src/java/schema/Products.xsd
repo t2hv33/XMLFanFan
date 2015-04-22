@@ -19,6 +19,7 @@
             <xsd:element name="Category" type="xsd:string"/>
             <xsd:element name="Image" type="xsd:string"/>
             <xsd:element name="Instock" type="xsd:int"/>
+            <xsd:element name="Promotion" type="xsd:int"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
