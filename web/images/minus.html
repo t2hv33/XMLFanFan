@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="description" content="Thuy truc computer" />
+        <meta name="keywords" content="computer" />
+
+        <link rel="stylesheet" type="text/css" href="/themes/classic/css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="/themes/classic/css/common.css" />
+        <link type="text/css" rel="stylesheet" href="/themes/classic/css/form.css"  />
+
+        <!-- Common CSS -->
+        <link type="text/css" rel="stylesheet" href="/themes/classic/css/global.css"  />
+        <link type="text/css" rel="stylesheet" href="/themes/classic/css/main.css"  />
+        <!-- End. Common CSS -->
+
+        
+        <!-- JS Library -->
+        <script type="text/javascript" src="js/common.js"></script>
+        <!-- End. JS Library -->
+
+        <!-- Page Scripts -->
+        <script type="text/javascript">
+
+            // initialise plugins
+            jQuery(document).ready(function(){
+
+            });
+
+        </script>
+        <!-- End. Page Scripts -->
+
+        <!--[if IE 6]>
+
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="/assets/70818c2a/superfish.css" />
+<link rel="stylesheet" type="text/css" href="/assets/70818c2a/superfish-navbar.css" />
+<script type="text/javascript" src="/assets/eb6a6e59/jquery.js"></script>
+<script type="text/javascript" src="/assets/58944e95/jquery.scrollfollow.js"></script>
+<script type="text/javascript" src="/assets/70818c2a/superfish.js"></script>
+<script type="text/javascript" src="/assets/70818c2a/hoverIntent.js"></script>
+<script type="text/javascript" src="/assets/70818c2a/CDropDownMenu.js"></script>
+<title>THUY TRUC COMPUTER</title>
+        <script type="text/javascript" src="js/common.js"></script>
+        <!-- End. JS Library -->
+        <!-- Page Scripts -->
+        <script type="text/javascript">
+            // initialise plugins
+            jQuery(document).ready(function(){
+            });
+        </script>        
+    </head>
+
+    <body>
+        <div style="position:absolute; right:0;">
+                    </div>
+        <div id="ajax-saving" class="processing hidden">Saving ... </div>
+        <div id="ajax-loading" class="processing hidden">Loading ... </div>
+        <div id="ajax-processing" class="processing hidden">Processing ... </div>
+        <div id="main">
+            <div id="header">
+                <div class="header-banner">
+                    <div id="searchBox">
+                        
+<form class="form" action="/themes/classic/images/minus.gif" method="post"><div class="form">    
+    <span>Tìm kiếm:</span>
+    <input size="20" class="InputButton" value="" name="SearchProductsForm[name]" id="SearchProductsForm_name" type="text" />    <input class="SubmitBtn" type="submit" name="yt0" value="" />    </div>
+</form>                    </div>
+                </div>
+                <div class="FuncBox">
+                    
+<ul id="menu">
+<li><a class="UnknownWidthBtn" href="/" title="Trang chủ"><span>Trang chủ</span></a></li>
+<li><a class="UnknownWidthBtn" href="/about-us.html" title="Giới thiệu"><span>Giới thiệu</span></a></li>
+<li><a class="UnknownWidthBtn" href="/lien-he.html" title="Liên hệ"><span>Liên hệ</span></a></li>
+</ul><script type="text/javascript">
+    //$('.active').parent().parent().prev().addClass('active');
+</script>
+                </div>
+            </div>
+            <div id="content">
+                <!-- breadcrumbs -->
+                <div class="flash-message">
+                                                                            </div>
+                <div id="column-22">
+
+<h2>Error 404</h2>
+
+<div class="error">
+Unable to resolve the request &quot;themes/classic/images/minus.gif&quot;.</div></div>
+            </div>
+            <div id="footer">
+                <div class="FuncBox_footer">
+                    <a href="/">Trang chủ</a>&nbsp|&nbsp;
+                    <a href="/about-us.html">Giới thiệu</a>&nbsp|&nbsp;
+                    <a href="/lien-he.html">Liên hệ</a>                    <p style="float: right;">Copyright &copy;ThuyTruc Computer 2011
+                        <span id="addr">ĐC: 838 Hồng Bàng , P.14, Q.6, TP.HCM - ĐT: (08)36017049 - DĐ: 0903143369 - 0908419591</span>
+                    </p>
+                </div>
+
+            </div> 
+        </div>
+        <script type="text/javascript">
+            /*<![CDATA[*/
+            $('#ajax-saving').scrollFollow();
+            $('#ajax-loading').scrollFollow();
+            $('#ajax-processing').scrollFollow();
+            $('#new-widget').click(function(){
+                if ($('#widget-list').val()!='') {
+                    $.ajax({
+                        type: "GET",
+                        url: "/layout/EnablePortlet/layout/it-portal-full-content&name="+$('#widget-list').val()+"&col="+ $('#content').children().next().next().attr('id').substr(7, 256),
+                        success: function(data) {
+                            window.location.replace("/themes/classic/images/minus.gif");
+                        },
+                        error:function (xhr, ajaxOptions, thrownError){
+                            alert(xhr.statusText);
+                        }
+                    });
+                } else {
+                    $('#widget-list').addClass('red-border');
+                }
+            });
+            $('#widget-list').change(function(){
+                $('#widget-list').removeClass('red-border');
+            });
+            /*]]>*/
+        </script>
+    </body>
+</html>

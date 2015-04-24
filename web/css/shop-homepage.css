@@ -27,11 +27,12 @@ body {
 }
 
 .caption h4 {
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 
 .thumbnail img {
-    width: 100%;
+    max-width: 300px;
+    max-height: 150px;
 }
 
 .ratings {
@@ -51,4 +52,10 @@ body {
 
 footer {
     margin: 50px 0;
+}
+.btn{
+    display: inline;
+}
+.price {
+    
 }
