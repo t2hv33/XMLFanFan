@@ -17,6 +17,8 @@
 <html lang="en">
     <%@ include file="header.jsp" %>    
     <script type="text/javascript" src="js/sort.js"></script>
+    <script type="text/javascript" src="js/detailPage.js"></script>
+    
 
 
     <body>
@@ -60,7 +62,7 @@
                         </div>
                     </div>
                     <!--Chỗ ADD Product transfom jstl+doc-->
-                    <div class="row">
+                    <div class="row" id="result">
                         <c:import url="xml/thanh.xml" var="xmldoc"/>
                         <c:import url="xsl/product.xsl" var="xsldoc"/>
                         <x:transform xml="${xmldoc}" xslt="${xsldoc}"/>

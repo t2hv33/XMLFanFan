@@ -6,6 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.xmlprojectContextListener"%>
+<%
+            String path = application.getRealPath("/");
+            String fileName = path + "xml/thanh.xml";
+            xmlprojectContextListener.prepareProductXML(fileName);
+%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,12 +171,12 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form id="login-form" action="serveletlogin" method="post" role="form" style="display: block;">
+                                    <form id="login-form" action="AccountController" method="post" role="form" style="display: block;">
                                         <div class="form-group">
-                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                            <input type="text" name="txtUsername" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                            <input type="password" name="txtPassword" id="password" tabindex="2" class="form-control" placeholder="Password">
                                         </div>
                                         <div class="form-group text-center">
                                             <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -178,7 +185,7 @@
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-sm-6 col-sm-offset-3">
-                                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                                                    <input type="submit" name="action" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Login">
                                                 </div>
                                             </div>
                                         </div>

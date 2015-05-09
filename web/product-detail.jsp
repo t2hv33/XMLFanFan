@@ -3,7 +3,7 @@
     Created on : Apr 21, 2015, 9:57:43 PM
     Author     : ThanhHV11
 --%>
-
+ <script type="text/javascript" src="js/detailPage.js"></script>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.xmlprojectContextListener"%>
 <!DOCTYPE html>

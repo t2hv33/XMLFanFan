@@ -37,7 +37,12 @@
    
                     <div class="caption">
                         <h4 class="">
-                            <a href="product-detail.jsp"> 
+                            <a> 
+                                <xsl:attribute name="onclick">
+                                    <xsl:value-of select="'ViewDetail('"/>
+                                    <xsl:value-of select="PID"/>
+                                    <xsl:value-of select="')'"/>
+                                </xsl:attribute>
                                 <xsl:value-of select="Name"/>
                             </a>
                         </h4>

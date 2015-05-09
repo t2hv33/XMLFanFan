@@ -7,6 +7,8 @@ package controller;
 
 import generate.jaxb.product.Allproduct;
 import generate.jaxb.product.ProductType;
+import generate.jaxb.users.Allusers;
+import generate.jaxb.users.UserType;
 import java.util.List;
 import javax.servlet.ServletContextEvent;
 import util.Marshall;
@@ -20,6 +22,12 @@ public class xmlprojectContextListener {
     public static void prepareProductXML(String fileName) {
         List<ProductType> Aproduct = blo.ProductBLO.getAllProducts();
         Marshall.marshall(fileName, new Allproduct(Aproduct));
+    }
+
+    public static void prepareUser(String fileName) {
+        List<UserType> iUser = blo.AccountBLO.getAllUser();
+        Marshall.marshall(fileName, new Allusers(iUser));
+
     }
 
     public void contextInitialized(ServletContextEvent sce) {

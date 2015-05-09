@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+<name>shyam</name>
+<friend>
+	<name>Abc</name>
+	<phNo>90909090909</phNo>
+</friend>
+<friend>
+	<name>Xyz</name>
+	<phNo>32323232323</phNo>
+</friend>
+</root>

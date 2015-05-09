@@ -57,8 +57,10 @@ public class UnmarshallingProducts {
 
     public static void main(String[] args) {
         //Đưa đường dẫn vào từ từ
-        File schemaProduct = new File("src/java/schema/Products.xsd");
-        GenerateJavaObj("product", schemaProduct);
+//        File schemaProduct = new File("src/java/schema/Products.xsd");
+//        GenerateJavaObj("product", schemaProduct);
+        File schemaProduct = new File("src/java/schema/Users.xsd");
+        GenerateJavaObj("users", schemaProduct);
     }
 
 }
